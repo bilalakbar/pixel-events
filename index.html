@@ -1,89 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TikTok Pixel Standard Events</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikTok Pixel Standard Events</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f6f7f9;
-      color: #1a1a1a;
-      line-height: 1.5;
-    }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f6f7f9;
+        color: #1a1a1a;
+        line-height: 1.5;
+      }
 
-    main {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
 
-    h1 {
-      margin: 0 0 0.5rem;
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.75rem;
+        font-weight: 600;
+      }
 
-    p {
-      margin: 0 0 2rem;
-      color: #555;
-    }
+      p {
+        margin: 0 0 2rem;
+        color: #555;
+      }
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      border: 1px solid #e2e4e8;
-      border-radius: 8px;
-      overflow: hidden;
-    }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        border: 1px solid #e2e4e8;
+        border-radius: 8px;
+        overflow: hidden;
+      }
 
-    li {
-      padding: 0.875rem 1.25rem;
-      border-bottom: 1px solid #e2e4e8;
-    }
+      li {
+        padding: 0.875rem 1.25rem;
+        border-bottom: 1px solid #e2e4e8;
+      }
 
-    li:last-child {
-      border-bottom: none;
-    }
+      li:last-child {
+        border-bottom: none;
+      }
 
-    li:hover {
-      background: #fafbfc;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>TikTok Pixel Standard Events</h1>
-    <p>Standard events you can track with the TikTok pixel.</p>
+      li:hover {
+        background: #fafbfc;
+      }
+    </style>
+    <!-- TikTok Pixel Code Start -->
+    <script>
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = (w[t] = w[t] || []);
+        ((ttq.methods = [
+          "page",
+          "track",
+          "identify",
+          "instances",
+          "debug",
+          "on",
+          "off",
+          "once",
+          "ready",
+          "alias",
+          "group",
+          "enableCookie",
+          "disableCookie",
+          "holdConsent",
+          "revokeConsent",
+          "grantConsent",
+        ]),
+          (ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          }));
+        for (var i = 0; i < ttq.methods.length; i++)
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        ((ttq.instance = function (t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
+            ttq.setAndDefer(e, ttq.methods[n]);
+          return e;
+        }),
+          (ttq.load = function (e, n) {
+            var r = "https://analytics.tiktok.com/i18n/pixel/events.js",
+              o = n && n.partner;
+            ((ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = r),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {}));
+            n = document.createElement("script");
+            ((n.type = "text/javascript"),
+              (n.async = !0),
+              (n.src = r + "?sdkid=" + e + "&lib=" + t));
+            e = document.getElementsByTagName("script")[0];
+            e.parentNode.insertBefore(n, e);
+          }));
 
-    <ul>
-      <li>Add Payment Info</li>
-      <li>Add to Cart</li>
-      <li>Add to Wishlist</li>
-      <li>Application Approval</li>
-      <li>Complete Registration</li>
-      <li>Contact</li>
-      <li>CustomizeProduct</li>
-      <li>Download</li>
-      <li>FindLocation</li>
-      <li>Initiate Checkout</li>
-      <li>Purchase</li>
-      <li>Schedule</li>
-      <li>Search</li>
-      <li>Start Trial</li>
-      <li>Submit Application</li>
-      <li>Submit Form</li>
-      <li>Subscribe</li>
-      <li>View Content</li>
-    </ul>
-  </main>
-</body>
+        ttq.load("D2I31BJC77U9R4VI8U20");
+        ttq.page();
+      })(window, document, "ttq");
+    </script>
+    <!-- TikTok Pixel Code End -->
+  </head>
+  <body>
+    <main>
+      <h1>TikTok Pixel Standard Events</h1>
+      <p>Standard events you can track with the TikTok pixel.</p>
+
+      <ul>
+        <li>Add Payment Info</li>
+        <li>Add to Cart</li>
+        <li>Add to Wishlist</li>
+        <li>Application Approval</li>
+        <li>Complete Registration</li>
+        <li>Contact</li>
+        <li>CustomizeProduct</li>
+        <li>Download</li>
+        <li>FindLocation</li>
+        <li>Initiate Checkout</li>
+        <li>Purchase</li>
+        <li>Schedule</li>
+        <li>Search</li>
+        <li>Start Trial</li>
+        <li>Submit Application</li>
+        <li>Submit Form</li>
+        <li>Subscribe</li>
+        <li>View Content</li>
+      </ul>
+    </main>
+  </body>
 </html>
